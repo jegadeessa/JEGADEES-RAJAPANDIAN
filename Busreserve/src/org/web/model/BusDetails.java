@@ -1,16 +1,8 @@
 package org.web.model;
 
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.TableGenerator;
 import javax.persistence.UniqueConstraint;
 
 @Entity
@@ -25,42 +17,35 @@ public class BusDetails {
 	private String Destination;
 	private String duration;
 	private Integer fare;
+	
+	@Column(name="Bus_no",nullable=false,length=100)
 	public String getBus_no() {
 		return bus_no;
 	}
-	public void setBus_no(String bus_no) {
-		this.bus_no = bus_no;
-	}
+	@Column(name="Bus_name",nullable=false,length=100)
 	public String getBus_name() {
 		return bus_name;
 	}
-	public void setBus_name(String bus_name) {
-		this.bus_name = bus_name;
-	}
+	@Column(name="Source",nullable=false,length=100)
 	public String getSource() {
 		return source;
 	}
-	public void setSource(String source) {
-		this.source = source;
-	}
+	
+	@Column(name="Destination",nullable=false,length=100)
 	public String getDestination() {
 		return Destination;
 	}
-	public void setDestination(String destination) {
-		Destination = destination;
-	}
+	
+	@Column(name="Duration",nullable=false,length=100)
 	public String getDuration() {
 		return duration;
 	}
-	public void setDuration(String duration) {
-		this.duration = duration;
-	}
+	
+	@Column(name="Fare",nullable=false,length=100)
 	public Integer getFare() {
 		return fare;
 	}
-	public void setFare(Integer fare) {
-		this.fare = fare;
-	}
+
 	
 
 }
